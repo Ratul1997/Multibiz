@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList, NativeModules, PermissionsAndroid } from 'react-native';
-import { Button, Input ,Icon} from "react-native-elements";
+import { View, Text, FlatList, NativeModules, PermissionsAndroid,TextInput } from 'react-native';
+import { Button, Input, Icon } from "react-native-elements";
 import DropdownAlert from 'react-native-dropdownalert';
 import AlertPro from "react-native-alert-pro";
 import CustomerInfoForm from './CustomerInfoForm'
@@ -8,7 +8,8 @@ import CustomerInfoForm from './CustomerInfoForm'
 
 export default class CustomerInfo extends Component {
     static navigationOptions = {
-        header: null,
+        // header: null,
+        title: 'CustomerInfo'
 
     };
     constructor(props) {
@@ -55,7 +56,17 @@ export default class CustomerInfo extends Component {
 
         return (
             <View style={{ flex: 1 }}>
-                {this.menuBar()}
+                {/* {this.menuBar()} */}
+                <FlatList style={{ flex: 0.8 }} data={CustomerInfoForm} renderItem={({ item, index }) => {
+
+                    return (
+                        <View style={{ height: item.sizeFactor * 35 }}>
+                            <Text style={{ marginLeft: 10, height: 40, fontSize: 18, fontWeight: "bold", textAlign: 'left' }}>{item.header}</Text>
+                            <TextInput editable={this.state.editable} style={{ backgroundColor: 'transparent', borderBottomColor: 'transparent',borderRadius:10,marginLeft:10,marginRight:10 }} multiline={item.newline} keyboardType={item.inputTypeText ? "ascii-capable" : "number-pad"}
+                                secureTextEntry={item.security} placeholder={item.header} onChangeText={(text) => this.setValueForKey(item.key, text)} value={this.state.newOrEditedService[item.key]} ></TextInput>
+                        </View>
+                    )
+                }} keyExtractor={(item, index) => item.key}></FlatList>
             </View>
         )
 

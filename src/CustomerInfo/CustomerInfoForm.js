@@ -24,7 +24,7 @@ export default Forms = [
         security: false,
         newline:true,
         required: false,
-        sizeFactor: 6
+        sizeFactor: 5
     },
     {
         key: "Area",
@@ -54,7 +54,7 @@ export default Forms = [
     {
         key: "Taken",
         header: "Taken By",
-        inputTypeText: false,
+        inputTypeText: true,
         security: false,
         newline:true,
         required: false,
