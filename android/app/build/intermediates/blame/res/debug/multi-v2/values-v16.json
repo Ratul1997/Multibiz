@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/rat/Desktop/MultiBiz/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/rat/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/abab7a829a19526ba39e4ba56fb2fb49/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/rat/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/3b28182ab73fa238aec23d727e603cf3/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}
