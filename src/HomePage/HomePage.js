@@ -6,14 +6,14 @@ import List from '../Resource/List'
 const numColumns = 2;
 export default class HomePage extends Component {
     static navigationOptions = {
-        title: 'None',
+        header:null,
       };
     menuBar = () => {
         return (
             <View style={{ flex: 0.1, width: "85%", flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'transparent', alignSelf: 'center' }}>
-                <Icon name="menu" type="entypo" size={30}></Icon>
+                <Icon name="menu" type="entypo" size={30} iconStyle={{ color: 'gray' }} ></Icon>
                 <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20 }}>Home</Text>
-                <Icon name="notification" type="antdesign" size={30} onPress={() => console.log()}></Icon>
+                <Icon name="notification" type="antdesign" size={30} onPress={() => console.log()} iconStyle={{ color: 'gray' }}></Icon>
             </View>
         )
     }
@@ -30,7 +30,7 @@ export default class HomePage extends Component {
         }
         return (
             <TouchableOpacity
-                style={styles.item}
+                style={styles.item} onPress={()=>this.props.navigation.push('CategoryPage')}
             >
                 <View style={{ flex: .8, backgroundColor: 'transparent', justifyContent: 'center', alignItems: 'center' }}>
                     <Image

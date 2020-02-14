@@ -37,7 +37,7 @@ export default class CustomerInfo extends Component {
             <View style={{ flex: 0.1, width: '100%', borderBottomColor: 'black', borderBottomWidth: 1 }}>
 
                 <View style={{ flex: 1, width: "85%", flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'transparent', alignSelf: 'center' }}>
-                    <Icon name="chevron-small-left" type="entypo" size={30} ></Icon>
+                    <Icon name="chevron-small-left" type="entypo" size={30} onPress={()=>this.props.navigation.pop()}></Icon>
                     <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20, justifyContent: 'center', alignSelf: 'center', }}>Product Code</Text>
                     <Icon ></Icon>
                 </View>

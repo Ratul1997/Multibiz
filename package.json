@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "firebase": "^7.8.2",
     "react": "16.6.3",
     "react-native": "0.57.8",
     "react-native-action-button": "2.8.5",
@@ -20,8 +21,10 @@
     "react-native-elements": "1.1.0",
     "react-native-gesture-handler": "1.0.12",
     "react-native-image-placeholder": "1.0.14",
+    "react-native-modal": "^11.5.3",
     "react-native-modalbox": "1.7.1",
     "react-native-modals": "^0.19.9",
+    "react-native-numeric-input": "^1.8.3",
     "react-native-popup-menu": "^0.15.6",
     "react-native-select-multiple": "1.2.0",
     "react-native-send-intent": "1.0.28",

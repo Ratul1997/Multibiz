@@ -12,6 +12,7 @@ import CategoryPage from "./CategoryPage/CategoryPage";
 import ProductPage from "./ProductPage/ProductPage";
 import OrderPage from "./OrderPage/OrderPage";
 import CustomerInfo from "./CustomerInfo/CustomerInfo";
+import NewProduct from "./NewProduct/NewProduct";
 
 
 
@@ -27,9 +28,10 @@ const TopNav = createStackNavigator({
     CartPage: CartPage,
     OrderPage: OrderPage,
     ProductPage:ProductPage,
-    CustomerInfo: CustomerInfo
+    CustomerInfo: CustomerInfo,
+    NewProduct:NewProduct
 },{ 
-    initialRouteName:'CustomerInfo',
+    initialRouteName:'NewProduct',
     // headerMode:'none'
 })
 

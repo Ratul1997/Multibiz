@@ -19,7 +19,7 @@ export default class CategoryPage extends Component {
             <View style={{ flex: 0.1, width: '100%', borderBottomColor: 'black', borderBottomWidth: 1 }}>
 
                 <View style={{ flex: 1, width: "85%", flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'transparent', alignSelf: 'center' }}>
-                    <Icon name="chevron-small-left" type="entypo" size={30} ></Icon>
+                    <Icon name="chevron-small-left" type="entypo" size={30}  onPress={()=>this.props.navigation.pop()}></Icon>
                     <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20, justifyContent: 'center', alignSelf: 'center', }}>Watch</Text>
                     <Icon name="search" type="evilIcons" size={30} onPress={() => this.setState({ isSearching: true })}></Icon>
                 </View>
@@ -45,7 +45,7 @@ export default class CategoryPage extends Component {
         }
         return (
             <TouchableOpacity
-                style={styles.item}
+                style={styles.item} onPress={()=>this.props.navigation.push('ProductPage')}
             >
                 <View style={{ flex: .5, backgroundColor: 'transparent', height: "40%", justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', width: '80%', margin: 5 }}>
                     <Image
@@ -75,7 +75,7 @@ export default class CategoryPage extends Component {
                 />
                 <ActionButton
                     buttonColor="#15B8EC"
-                    onPress={() => { console.log("hi") }}
+                    onPress={()=>this.props.navigation.push('NewProduct')}
                 />
             </View>
         )
